@@ -1,12 +1,15 @@
 <script>
-  
 </script>
 
 <template>
   <div>
     <h1>离骚ipsum</h1>
-    <button type="submit" value = "text">生成一行文字</button>
-    <button type="submit" value = "paragraph">生成多段段落</button>
+    <router-link to="/posts">
+      <button >生成一行文字</button>
+    </router-link>
+    <router-link to="/posts">
+      <button>生成多个段落</button>
+    </router-link>
   </div>
 </template>
 
