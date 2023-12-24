@@ -1,15 +1,23 @@
-<script>
-</script>
+
 
 <template>
-  <div>
+  <div id='app'>
     <h1>离骚ipsum</h1>
-    <router-link to="/posts">
-      <button >生成一行文字</button>
-    </router-link>
-    <router-link to="/posts">
-      <button>生成多个段落</button>
-    </router-link>
+    <button @click="word"> 生成一行文字</button>
   </div>
 </template>
+
+<script>
+  import word from './word.vue'
+  export default {
+    components: {
+      word
+    },
+    methods:{
+      word(){
+        this.$router.push("/word")
+      }
+    }
+  }
+</script>
 

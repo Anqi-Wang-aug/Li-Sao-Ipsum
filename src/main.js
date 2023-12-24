@@ -1,22 +1,9 @@
-import './assets/main.css'
+import Vue from 'vue';
+import router from './router';
 
-import { createApp } from 'vue'
-import App from './App.vue'
-import * as VueRouter from 'vue-router'
+new Vue({
+    router,
+    render: h=>h(App)
+}).$mount('#app');
 
-const word = {template: '<div>Word</div>'}
-const paragraph = {template: '<div>Paragraph</div>'}
 
-const routes = [
-    { path: '/word', component: word },
-    { path: '/paragraph', component: paragraph },
-]
-  
-const router = VueRouter.createRouter({
-    history: VueRouter.createWebHashHistory(),
-    routes,
-})
-
-const app = createApp(App)
-app.use(router)
-app.mount('#app')
